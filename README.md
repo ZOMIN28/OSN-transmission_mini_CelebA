@@ -7,10 +7,7 @@
 This is the paper “DF-RAP: A Robust Adversarial Perturbation for Defending against Deepfakes in Real-world Social Network Scenarios" OSN-transmission CelebA sampling dataset collected by manual upload and download. This dataset includes 30,000 facial images of size $256\times256$ transmitted through online social networks (OSN) and their corresponding original images. Among them, Facebook, Twitter, WeChat and Weibo were selected as the transmission OSN, with 7500 images each.
 
 **Dataset link:**    
-(1) Google Drive :    
-
-(2) Baidu Drive :     
-
+Google Drive :  https://drive.google.com/file/d/1Bb6o6wQ8qTrxDN6NJUeoeUVq02Btjg-y/view?usp=drive_link
 
 
 ### 2. Investigation on the lossy operating mechanism of OSNs
@@ -52,7 +49,11 @@ As mentioned above, we randomly stitch images and upload them to OSNs and downlo
 ### 5. How to Use It?
 
 We provide a python script `data_loader.py` for reading these OSN transmitted images and their corresponding original images in pairs.
-
+```
+    celeba_loader = get_loader("OSN-transmission_mini_CelebA/original_images/","OSN-transmission_mini_CelebA/transmission_images/","OSN-transmission_mini_CelebA/attributes.txt")
+    for n,(o_img,c_img,c_org) in enumerate(tqdm(celeba_loader)):
+        ······
+```
 
 
 ### 6. Reference
