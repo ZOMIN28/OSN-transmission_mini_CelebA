@@ -1,8 +1,6 @@
 # OSN-transmission_mini_CelebA
-The OSN-transmission Mini CelebA Dataset in "DF-RAP: A Robust Adversarial Perturbation for Defending against Deepfakes in Real-world Social Network Scenarios"
-## The OSN-transmission Mini CelebA Dataset in "DF-RAP: A Robust Adversarial Perturbation for Defending against Deepfakes in Real-world Social Network Scenarios"
 
-
+#### The OSN-transmission Mini CelebA Dataset in "DF-RAP: A Robust Adversarial Perturbation for Defending against Deepfakes in Real-world Social Network Scenarios"
 
 ### 1. Introduction
 
@@ -23,7 +21,7 @@ We conducted an in-depth investigation of the 4 compression and resize mechanism
 
 The image compression quality factor (QF) is adaptively determined based on the size and content of the image. As shown in Fig. 1 (a), JPEG compression with QF values ranging from 71 to 95 is used by Facebook, with QF=92 being the most commonly used. Our investigation also revealed that Facebook tends to conduct compression with lower QFs (e.g., QF=71) for small-sized but content-rich images. Twitter employs a simpler compression strategy: larger images are compressed using JPEG with QF=85, while smaller images are not compressed. According to the results presented in Fig.2 (b), this threshold is reported as $900\times900$. For WeChat and Weibo, more complex and stringent lossy operations are employed, making quantification difficult. In addition, we explored the average changes in pixel values for images of different sizes. As shown in Fig. 2 (b), WeChat produces the most significant changes to the image. These findings highlight the disparity in the distribution of real compressed images across different OSN platforms, confirming the complexity of the lossy compression mechanism employed by OSNs.
 
-<img src="C:\Users\50925\Desktop\OSN-transmission_mini_CelebA\fig1.png" alt="fig1" style="zoom:67%;" />
+<img src="images\fig1.png" alt="fig1" style="zoom:67%;" />
 
 For Weibo, there is a big difference between using the IOS terminal and the PC web terminal to transmit images. iPhone uses a new image format to save pictures on Weibo, namely `.HEIF`. Compared to `.jpg`, `.HEIF` implements more severe compression, saving and transmitting data more efficiently while maintaining good visual quality. On the PC web page, Weibo will only perform very slight compression on images, or even no compression at all. It is worth noting that in this work, **we used iPhone to upload and download images on Weibo.**
 
@@ -31,7 +29,7 @@ For Weibo, there is a big difference between using the IOS terminal and the PC w
 
 Additionally, we studied the resizing strategy of OSNs. The specific resizing details for the different social media platforms are displayed in Table 1. Notably, to the best of our knowledge, WeChat and Weibo only constrain the width of the image, while there is no upper bound on the length of the image within the knowable range. Moreover, Twitter is reported to have a larger threshold for performing resizing. In this paper, we focus on adversarial perturbations aimed at resisting OSN compression, considering that compression operations are more destructive and widespread. 
 
-<img src="C:\Users\50925\Desktop\OSN-transmission_mini_CelebA\tab1.png" alt="tab1" style="zoom:67%;" />
+<img src="images\tab1.png" alt="tab1" style="zoom:67%;" />
 
 **Please note:** As most social platforms, their compression policies may be adjusted and updated frequently to adapt to changing network environments, user needs, and technological developments. These platforms may make adjustments based on user feedback, technological advancements, and competitor strategies to ensure that their compression strategies maximize performance and efficiency while maintaining image and video quality. For example, Weibo sometimes chooses `2000px` as the threshold for implementing Resize. **Therefore, the survey data provided in this work are for reference only.**
 
