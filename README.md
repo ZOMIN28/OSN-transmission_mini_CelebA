@@ -37,7 +37,7 @@ Additionally, we studied the resizing strategy of OSNs. The specific resizing de
 
 ### 3. Collection Details
 
-The compression mechanism adopted by a certain OSN is closely related to the size of the image. Therefore, uploading only the $256\times256$ resolution image contained in CelebA cannot obtain sufficient OSN compression information. Therefore, at the stage of uploading images to OSNs, to simulate photo sharing in real-world scenarios, we stitch images randomly to obtain upload examples of different sizes. For Twitter, the maximum size of the stitched image is limited to ,$4096\times4096$ while it is limited to $1280\times2048$ for others.      
+The compression mechanism adopted by a certain OSN is closely related to the size of the image. Therefore, uploading only the $256\times256$ resolution image contained in CelebA cannot obtain sufficient OSN compression information. Therefore, at the stage of uploading images to OSNs, to simulate photo sharing in real-world scenarios, a crude but effective approach was taken: we stitch images randomly to obtain examples of different sizes to upload. For Twitter, the maximum size of the stitched image is limited to ,$4096\times4096$ while it is limited to $1280\times2048$ for others.      
 
 We used a `Legion Y9000K2021H` running the Windows 11 operating system to upload and download images on Facebook and Twitter, and an `iPhone 13` with IOS 16.6 to accomplish this task on WeChat and Weibo.
 
