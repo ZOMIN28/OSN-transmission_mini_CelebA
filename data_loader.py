@@ -1,4 +1,3 @@
-# 定义数据集
 from PIL import Image
 import torch
 from torch.utils.data import Dataset
